@@ -50,7 +50,7 @@ export default function Home() {
       estimationRisk = 0
     }
 
-    const riskPercentage = estimationRisk * 5 > 100 ? 100 : estimationRisk * 3
+    const riskPercentage = estimationRisk * 3 > 100 ? 100 : estimationRisk * 3
 
     
 
@@ -95,15 +95,15 @@ export default function Home() {
           <div className="results">
             <h2>Results</h2>
             <div className="card">
-              <h3>Total Estimate</h3>
+              <h3>Estimation</h3>
               <p className="display-number">{results.totalEstimate.toFixed(1)}</p>
             </div>
             <div className="card">
               <h3>Standard Deviation</h3>
-              <p className="display-number">{results.standardDeviation.toFixed(1)}</p>
+              <p className="display-number">{(results.standardDeviation * 3).toFixed(1)}</p>
             </div>
             <div className="card">
-              <h3>Estimation Risk</h3>
+              <h3>Delivery Risk</h3>
               <p className="display-number">{Math.round(results.riskPercentage)}</p>
               <div className="progress">
                 <div className={`bar ${results.riskClass}`} style={{width: `${results.riskPercentage}%`}}></div>
