@@ -17,13 +17,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-gray-50 text-black dark:text-white dark:bg-black;
 }
 
 @layer utilities {
@@ -61,23 +55,23 @@ body {
 }
 
 .task > input[type=text] {
-  @apply text-xl p-2 border dark:border-gray-600 dark:bg-zinc-900 rounded w-full dark:text-white;
+  @apply text-xl p-2 border border-gray-300 dark:border-gray-600 dark:bg-zinc-900 rounded w-full dark:text-white;
 }
 
 .task {
-  @apply pb-4 rounded border-b-2 dark:border-b-gray-600;
+  @apply pb-4 rounded border-b-2 border-b-gray-300 dark:border-b-gray-600;
 }
 
 input[type=text], input[type=number] {
-  @apply p-2 border dark:border-gray-600 dark:bg-zinc-900 rounded dark:text-white;
+  @apply p-2 border border-gray-300 dark:border-gray-600 dark:bg-zinc-900 rounded dark:text-white;
 }
 
 button {
-  @apply p-2 dark:bg-slate-800 dark:text-white rounded;
+  @apply p-2 bg-slate-500 hover:bg-slate-600 text-white dark:hover:bg-slate-700 dark:bg-slate-800 dark:text-white rounded;
 }
 
 .card {
-  @apply border dark:border-gray-600 rounded p-2;
+  @apply border border-gray-300 dark:border-gray-600 rounded p-2;
 }
 
 .results {
@@ -93,5 +87,5 @@ button {
 }
 
 .display-number {
-  @apply text-4xl font-bold dark:text-slate-400;
+  @apply text-4xl font-bold text-black dark:text-slate-400;
 }
